@@ -198,17 +198,6 @@ certificateViewCloseBtns.forEach((btn, index) => {
   });
 });
 
-// Skills Toggle
-const skillsHeaders = document.querySelectorAll('.skills__header');
-
-skillsHeaders.forEach(header => {
-    header.addEventListener('click', () => {
-        const content = header.parentElement;
-        content.classList.toggle('skills__open');
-    });
-});
-
-
 // Skills Modals
 const skillModals = document.querySelectorAll(".skill-modal");
 const skillOpenBtns = document.querySelectorAll(".skill-open-btn");

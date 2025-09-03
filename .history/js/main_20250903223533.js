@@ -208,30 +208,6 @@ skillsHeaders.forEach(header => {
     });
 });
 
-
-// Skills Modals
-const skillModals = document.querySelectorAll(".skill-modal");
-const skillOpenBtns = document.querySelectorAll(".skill-open-btn");
-const skillModalCloseBtns = document.querySelectorAll(".skill-modal-close-btn");
-
-var openSkillModal = function(modalClick){
-    skillModals[modalClick].classList.add("active");
-}
-
-skillOpenBtns.forEach((openBtn, i) => {
-    openBtn.addEventListener("click", () => {
-        openSkillModal(i);
-    });
-});
-
-skillModalCloseBtns.forEach((closeBtn) => {
-    closeBtn.addEventListener("click", () => {
-        skillModals.forEach((modalView) => {
-            modalView.classList.remove("active");
-        });
-    });
-});
-
 // Portfolio Filter
 const filterBtns = document.querySelectorAll(".filter-btn");
 const portfolioItems = document.querySelectorAll(".img-card-container");

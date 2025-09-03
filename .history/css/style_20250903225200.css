@@ -585,7 +585,7 @@ header.sticky .nav-bar{
 
 
 .skills__content {
-    background-color: none;
+    background-color: var(--card-bg-color);
     border-radius: .5rem;
     padding: 1.5rem;
 }
@@ -593,7 +593,7 @@ header.sticky .nav-bar{
 .skills__header{
   display: flex;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   cursor: pointer;
 }
 
@@ -608,7 +608,7 @@ header.sticky .nav-bar{
 }
 
 .skills__title{
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .skills__subtitle{
