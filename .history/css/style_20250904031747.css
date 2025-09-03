@@ -1002,6 +1002,56 @@ header.sticky .nav-bar{
     border-radius: 0.5rem;
 }
 
+/* --- New Rule for the Certificate Grid --- */
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Creates four equal columns */
+  gap: 1.5rem; /* Adds spacing between cards */
+  justify-items: center;
+}
+
+/* --- Modified Rules for Certificate Cards --- */
+.certificate-card {
+  background-color: var(--container-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 1rem; /* Reduced padding */
+  border-radius: 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 220px; /* Limits the card width */
+  transition: 0.4s;
+}
+
+.certificate-card .year {
+  font-size: var(--small-font-size); /* Smaller year text */
+  color: var(--text-color-light);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.certificate-card .certificate-title {
+  font-size: var(--normal-font-size); /* Smaller title */
+  font-weight: var(--font-medium);
+  margin-bottom: 0.5rem;
+}
+
+.certificate-card .certificate-issuer {
+  font-size: var(--smaller-font-size); /* Smaller issuer text */
+  margin-bottom: 1rem;
+}
+
+/* --- MEDIA QUERY for smaller screens --- */
+@media screen and (max-width: 992px) {
+  .certificate-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards on tablets */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .certificate-grid {
+    grid-template-columns: 1fr; /* 1 card on mobile */
+  }
+}
 
 .modal-close-btn {
     position: absolute;
@@ -1475,26 +1525,6 @@ footer .copyright p{
   color: #fff;
   font-size: var(--font-normal);
   text-align: center;
-}
-
-/* Certificate card grid layout */
-.certificate-card-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-/* Responsive: 2 per row on tablets, 1 per row on mobile */
-@media (max-width: 900px) {
-  .certificate-card-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 600px) {
-  .certificate-card-list {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media screen and (max-width: 1070px) {

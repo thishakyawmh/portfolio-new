@@ -1477,26 +1477,6 @@ footer .copyright p{
   text-align: center;
 }
 
-/* Certificate card grid layout */
-.certificate-card-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-/* Responsive: 2 per row on tablets, 1 per row on mobile */
-@media (max-width: 900px) {
-  .certificate-card-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 600px) {
-  .certificate-card-list {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media screen and (max-width: 1070px) {
   .navigation{
     position: fixed;

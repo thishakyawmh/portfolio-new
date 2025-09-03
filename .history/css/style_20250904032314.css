@@ -874,11 +874,12 @@ header.sticky .nav-bar{
 
 .certificate-card {
     background-color: var(--card-bg-color);
-    padding: 1.5rem;
+    padding: 1rem; /* Reduced padding */
     border-radius: 0.5rem;
     box-shadow: var(--box-shadow);
     text-align: left;
     border-bottom: 3px solid var(--second-color);
+    font-size: 0.9rem; /* Smaller font size */
 }
 
 .certificate-card .year {
