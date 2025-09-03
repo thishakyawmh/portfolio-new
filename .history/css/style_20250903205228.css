@@ -917,8 +917,6 @@ header.sticky .nav-bar{
     border-radius: 10px;
     box-shadow: var(--box-shadow);
     overflow: hidden;
-    border-bottom: 3px solid var(--second-color); /* Add this line */
-    cursor: pointer; /* Add this line */
 }
 
 .portfolio-list .img-card {

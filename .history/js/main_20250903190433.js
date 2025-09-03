@@ -29,25 +29,21 @@ modalCloseBtns.forEach((modalCloseBtn) => {
 
 //Portfolio Modals
 const portfolioModals = document.querySelectorAll(".portfolio-model");
-const imgCardContainers = document.querySelectorAll(".img-card-container");
+const imgCards = document.querySelectorAll(".img-card");
 const portfolioCloseBtns = document.querySelectorAll(".portfolio-close-btn");
 
 var portfolioModal = function(modalClick){
     portfolioModals[modalClick].classList.add("active");
 }
 
-imgCardContainers.forEach((imgCardContainer, i) => {
-    imgCardContainer.addEventListener("click", () => {
+imgCards.forEach((imgCard, i) => {
+    imgCard.addEventListener("click", () => {
         portfolioModal(i);
     });
 });
 
 portfolioCloseBtns.forEach((portfolioCloseBtn) => {
-    // We add the 'event' parameter here
-    portfolioCloseBtn.addEventListener("click", (event) => {
-        // This new line stops the click from affecting the card behind it
-        event.stopPropagation(); 
-        
+    portfolioCloseBtn.addEventListener("click", () => {
         portfolioModals.forEach((portfolioModalView) => {
             portfolioModalView.classList.remove("active");
         });

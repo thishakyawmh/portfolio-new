@@ -43,11 +43,7 @@ imgCardContainers.forEach((imgCardContainer, i) => {
 });
 
 portfolioCloseBtns.forEach((portfolioCloseBtn) => {
-    // We add the 'event' parameter here
-    portfolioCloseBtn.addEventListener("click", (event) => {
-        // This new line stops the click from affecting the card behind it
-        event.stopPropagation(); 
-        
+    portfolioCloseBtn.addEventListener("click", () => {
         portfolioModals.forEach((portfolioModalView) => {
             portfolioModalView.classList.remove("active");
         });

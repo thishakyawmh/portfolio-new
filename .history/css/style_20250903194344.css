@@ -912,49 +912,42 @@ header.sticky .nav-bar{
   cursor: pointer;
 }
 
-.portfolio-list .img-card-container {
-    background-color: var(--card-bg-color);
-    border-radius: 10px;
-    box-shadow: var(--box-shadow);
-    overflow: hidden;
-    border-bottom: 3px solid var(--second-color); /* Add this line */
-    cursor: pointer; /* Add this line */
+.portfolio-list .img-card .overlay{
+  transition: 1s ease;
 }
 
-.portfolio-list .img-card {
-    height: auto; /* Remove fixed height to be responsive */
-    cursor: pointer;
-    overflow: hidden; /* Ensures the image corners are rounded */
+.portfolio-list .img-card:hover .overlay{
+  z-index: 777;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.portfolio-list .img-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
+.portfolio-list .img-card .info{
+  z-index: 777;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 20px;
+  color: #fff;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: .5s ease;
 }
 
-.portfolio-list .img-card:hover img {
-    transform: scale(1.05); /* Optional: nice hover effect */
+.portfolio-list .img-card:hover .info{
+  transform: translateY(0);
+  opacity: 1;
 }
 
-.portfolio-list .info {
-    padding: 15px;
-    text-align: left;
+.portfolio-list .img-card .info h3{
+  font-size: 1.5em;
 }
 
-.portfolio-list .info h4 {
-    font-size: 1.2em;
-    font-weight: 600;
-    color: var(--first-color);
-    margin-bottom: 5px;
+.portfolio-list .img-card .info span{
+  font-size: 1.2em;
 }
-
-.portfolio-list .info span {
-    font-size: 0.9em;
-    color: var(--third-color);
-}
-
 
 .portfolio-list .img-card img{
   width: 100%;
