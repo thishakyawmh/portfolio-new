@@ -912,22 +912,7 @@ header.sticky .nav-bar{
     transition: transform 0.2s;
 }
 
-/* Add this rule for the verify button */
-.certificate-image-display .verify-btn {
-  position: absolute;   /* Positions the button relative to its container */
-  bottom: 15px;         /* 15px from the bottom */
-  right: 15px;          /* 15px from the right */
-  padding: 0.5rem 1rem;
-  background-color: var(--second-color);
-  color: #fff;
-  border-radius: 0.5rem;
-  transition: 0.3s ease;
-}
 
-.certificate-image-display .verify-btn:hover {
-    background-color: var(--hover-color);
-    transform: scale(1.05);
-}
 
 .view-btn:hover {
     color: var(--hover-color);
@@ -1003,20 +988,32 @@ header.sticky .nav-bar{
     position: absolute;
     top: 1rem;
     right: 1rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: var(--first-color);
     cursor: pointer;
     background-color: var(--second-color);
-    padding: 0.5rem 0.6rem;
+    padding: 0.5rem;
     border-radius: 0.5rem;
-    z-index: 1001;
 }
 
 .modal-close-btn:hover {
     background-color: var(--hover-color);
 }
 
+.verify-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--second-color);
+    color: #fff;
+    border-radius: 0.5rem;
+    transition: 0.3s ease;
+}
 
+.verify-btn:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
 
 .service .container .content{
   width:100%;
