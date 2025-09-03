@@ -952,31 +952,6 @@ header.sticky .nav-bar{
     max-height: 90%;
 }
 
-/* --- New Certificate Modal Positioning --- */
-
-.certificate-view-modal-body {
-    background: none;
-    box-shadow: none;
-    padding: 0;
-}
-
-/* This new wrapper is our main container for positioning */
-.certificate-image-wrapper {
-    position: relative; /* This allows us to position the buttons inside it */
-    padding: 30px; /* Creates space around the image for the buttons */
-    background: var(--modal-bg-color); /* The background is now on the wrapper */
-    border-radius: 10px;
-    box-shadow: var(--box-shadow);
-}
-
-.certificate-image-wrapper img {
-    max-width: 100%;
-    display: block; /* Removes extra space under the image */
-    border-radius: 8px;
-}
-
-
-
 .certificate-view-modal-body img {
     max-width: 100%;
     max-height: 100%;
