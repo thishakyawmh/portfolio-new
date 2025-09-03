@@ -993,7 +993,7 @@ header.sticky .nav-bar{
 
 .certificate-card .year i{
   margin-right: 8px;
-  margin-bottom: 5px;
+  color: var(--second-color);
 }
 
 .certificate-view-modal-body img {
