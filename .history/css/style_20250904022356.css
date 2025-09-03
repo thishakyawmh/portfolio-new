@@ -928,14 +928,15 @@ header.sticky .nav-bar{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    backdrop-filter: blur(10px); /* This adds the blur effect */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .certificate-view-modal.active {
@@ -944,12 +945,21 @@ header.sticky .nav-bar{
 }
 
 .certificate-view-modal-body {
-    position: relative;
-    background-color: var(--modal-bg-color);
-    padding: 1rem;
-    border-radius: 0.5rem;
-    max-width: 90%;
-    max-height: 90%;
+    position: relative; /* This is the key for positioning the buttons */
+    background: var(--modal-bg-color);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    padding: 25px; /* Padding for the image inside */
+    max-width: 900px;
+    width: 90%;
+    max-height: 90vh;
+    box-sizing: border-box;
+    transform: translateY(-50px);
+    transition: transform 0.5s ease;
+}
+
+.certificate-view-modal.active .certificate-view-modal-body {
+    transform: translateY(0);
 }
 
 /* --- New Certificate Modal Positioning --- */
@@ -975,130 +985,33 @@ header.sticky .nav-bar{
     border-radius: 8px;
 }
 
-/* --- New Certificate Modal Styles (Matching Latest Request) --- */
-
-/* Main modal overlay - includes blur effect */
-.certificate-view-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
-    backdrop-filter: blur(10px); /* The blur effect */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.certificate-view-modal.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Modal's main content box (the white/light grey background) */
-.certificate-view-modal-body {
-    position: relative; /* Crucial for positioning child buttons */
-    background: var(--modal-bg-color); /* The background color of the modal box */
-    border-radius: 10px;
-    box-shadow: var(--box-shadow);
-    padding: 20px; /* Internal padding for the modal content */
-    max-width: 900px; /* Max width of the entire modal box */
-    width: 90%; /* Responsive width */
-    max-height: 90vh; /* Max height to ensure it fits on screen */
-    display: flex;
-    flex-direction: column; /* Stack contents vertically */
-    align-items: center; /* Center the image horizontally */
-    justify-content: center; /* Center content vertically */
-    box-sizing: border-box; /* Include padding in width/height calculations */
-    transform: translateY(-50px); /* Initial position for animation */
-    transition: transform 0.5s ease;
-}
-
-.certificate-view-modal.active .certificate-view-modal-body {
-    transform: translateY(0); /* Final position for animation */
-}
-
-/* Corrected style for the certificate image display */
-.certificate-image-display img {
-    display: block;
-    border-radius: 8px;
-    /* This is the key change: it prevents the image from stretching */
-    max-width: 100%;
-    height: auto; /* Maintain aspect ratio */
-}
-
-/* Close Button - positioned absolutely within .certificate-view-modal-body */
-.certificate-view-modal .modal-close-btn {
-    position: absolute;
-    top: 15px; /* Distance from top of modal-body */
-    right: 15px; /* Distance from right of modal-body */
-    z-index: 10; /* Ensure it's on top */
-    font-size: 2rem; /* Larger icon */
-    color: var(--first-color); /* Theme color */
-    background: none;
-    padding: 5px; /* Add some padding around the X for easier clicking */
-    border-radius: 50%; /* Make it circular */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-.certificate-view-modal .modal-close-btn:hover {
-    color: var(--second-color); /* Hover color */
-    background-color: rgba(0,0,0,0.1); /* Subtle background on hover */
-}
-
-/* Verify Button - positioned absolutely within .certificate-view-modal-body */
-.certificate-view-modal .verify-btn {
-    position: absolute;
-    bottom: 15px; /* Distance from bottom of modal-body */
-    right: 15px; /* Distance from right of modal-body */
-    z-index: 10;
-    margin: 0; /* Reset any default margin */
-    /* Add existing button styles here or ensure they are applied */
-    background-color: var(--second-color); /* Example button background */
-    color: #fff;
-    padding: 10px 25px;
-    border-radius: 5px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.certificate-view-modal .verify-btn:hover {
-    background-color: var(--hover-color); /* Example hover color */
-}
-
-/* Responsive adjustments if needed */
-@media screen and (max-width: 768px) {
-    .certificate-view-modal-body {
-        padding: 15px;
-        width: 95%;
-        max-height: 95vh;
-    }
-    .certificate-view-modal .modal-close-btn {
-        font-size: 1.5rem;
-        top: 10px;
-        right: 10px;
-    }
-    .certificate-view-modal .verify-btn {
-        padding: 8px 20px;
-        bottom: 10px;
-        right: 10px;
-    }
-}
 
 .certificate-view-modal-body img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 0.5rem;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Close Button - Top Right of the Modal Box */
+.certificate-view-modal .modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.8rem;
+    color: var(--first-color);
+    background-color: var(--second-color);
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Verify Button - Bottom Right of the Modal Box */
+.certificate-view-modal .verify-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    margin-top: 0; /* Override default margin */
+    z-index: 10;
 }
 
 .modal-close-btn {
