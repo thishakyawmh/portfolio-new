@@ -1309,10 +1309,6 @@ header.sticky .nav-bar{
     margin-bottom: 60px;
 }
 
-.portfolio-buttons a i{
-  margin-right: 8px;
-}
-
 .filter-btn {
     background: var(--card-bg-color);
     color: var(--first-color);
@@ -1322,7 +1318,7 @@ header.sticky .nav-bar{
     cursor: pointer;
     font-weight: 500;
     transition: background-color 0.3s, color 0.3s;
-    font-size: 14px;
+    font-size: 10px;
 }
 
 .filter-btn:hover,

@@ -1307,10 +1307,7 @@ header.sticky .nav-bar{
     align-items: center;
     gap: 15px;
     margin-bottom: 60px;
-}
-
-.portfolio-buttons a i{
-  margin-right: 8px;
+    font-size: var(--font-normal);
 }
 
 .filter-btn {
@@ -1322,7 +1319,6 @@ header.sticky .nav-bar{
     cursor: pointer;
     font-weight: 500;
     transition: background-color 0.3s, color 0.3s;
-    font-size: 14px;
 }
 
 .filter-btn:hover,
