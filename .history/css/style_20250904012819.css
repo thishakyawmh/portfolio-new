@@ -852,8 +852,6 @@ header.sticky .nav-bar{
 
 .qualification__calendar .fa-arrow-right{
   margin-left: 10px;
-  color: var(--second-color);
-  cursor: pointer;
 }
 
 .qualification__rounder {
