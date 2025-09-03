@@ -505,63 +505,20 @@ header.sticky .nav-bar{
     margin-bottom: 0.5rem;
 }
 
-
-/* Keyframes for the animation */
-@keyframes animated-progress {
-  from { background-position: 40px 0; }
-  to { background-position: 0 0; }
-}
-
-/* New stylish progress bar for subsections */
 .skills__list .skill-progress-bar {
-    height: 8px; /* Makes the bar slightly thicker */
+    height: 6px;
     width: 100%;
     background-color: var(--line-color);
-    border-radius: 5px; /* More rounded corners */
+    border-radius: 0.25rem;
     overflow: hidden;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .skills__list .skill-percentage {
     display: block;
     height: 100%;
-    border-radius: 5px;
-    
-    /* The striped gradient effect */
-    background-image: repeating-linear-gradient(
-        -45deg,
-        var(--second-color) 0px,
-        var(--second-color) 10px,
-        var(--hover-color) 10px,
-        var(--hover-color) 20px
-    );
-    
-    /* Animation properties */
-    background-size: 40px 40px;
-    animation: animated-progress 1.5s linear infinite;
-    transition: width 0.6s ease;
+    background: var(--second-color);
+    border-radius: 0.25rem;
 }
-
-
-/* New styles for skill card title and percentage */
-.skill-title-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
-}
-
-.skills__list .skill-title {
-    margin-bottom: 0; /* Remove bottom margin since wrapper has it now */
-}
-
-.skill-value {
-    font-size: var(--font-small);
-    font-weight: 500;
-    color: var(--third-color);
-}
-
-
 
 .skills__list .skill-open-btn {
     background: none;
@@ -613,7 +570,7 @@ header.sticky .nav-bar{
 }
 
 .skill-modal-body h3{
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 /* Styles for skill names with logos inside modals */
@@ -705,34 +662,16 @@ header.sticky .nav-bar{
   font-weight: bolder;
 }
 
-/* --- Replaced skill bar styles for both accordion and modal --- */
-.skills__bar {
-    height: 8px;
-    width: 100%;
-    background-color: var(--line-color);
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+.skills__bar,
+.skills__percentage {
+  height: 5px;
+  border-radius: 0.25rem;
 }
 
-.skills__percentage {
-    display: block;
-    height: 100%;
-    border-radius: 5px;
-    
-    /* The striped gradient effect */
-    background-image: repeating-linear-gradient(
-        -45deg,
-        var(--second-color) 0px,
-        var(--second-color) 10px,
-        var(--hover-color) 10px,
-        var(--hover-color) 20px
-    );
-    
-    /* Animation properties */
-    background-size: 40px 40px;
-    animation: animated-progress 1.5s linear infinite;
-    transition: width 0.6s ease;
+.skills__bar {
+  background-color: #9b9b9b;
+  border-radius: 0.25rem;
+  overflow: hidden;
 }
 
 .skills__percentage {
