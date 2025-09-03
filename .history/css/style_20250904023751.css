@@ -896,7 +896,7 @@ header.sticky .nav-bar{
 .certificate-issuer {
     color: var(--third-color);
     font-size: var(--font-small);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .view-btn {
@@ -904,6 +904,7 @@ header.sticky .nav-bar{
     font-size: var(--small-font-size);
     font-weight: 500;
     cursor: pointer;
+    margin-top: 10px;
     background: none transparent;
     border-width: initial;
     border-style: none;
@@ -989,13 +990,6 @@ header.sticky .nav-bar{
     font-size: 1.5rem;
     color: var(--first-color);
     cursor: pointer;
-    background-color: var(--second-color);
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-}
-
-.modal-close-btn:hover {
-    background-color: var(--hover-color);
 }
 
 .verify-btn {
@@ -1005,12 +999,7 @@ header.sticky .nav-bar{
     background-color: var(--second-color);
     color: #fff;
     border-radius: 0.5rem;
-    transition: 0.3s ease;
-}
-
-.verify-btn:hover {
-    background-color: var(--hover-color);
-    transform: scale(1.05);
+    top : 20px;
 }
 
 .service .container .content{

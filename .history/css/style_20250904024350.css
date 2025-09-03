@@ -896,7 +896,7 @@ header.sticky .nav-bar{
 .certificate-issuer {
     color: var(--third-color);
     font-size: var(--font-small);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .view-btn {
@@ -904,6 +904,7 @@ header.sticky .nav-bar{
     font-size: var(--small-font-size);
     font-weight: 500;
     cursor: pointer;
+    margin-top: 5px;
     background: none transparent;
     border-width: initial;
     border-style: none;
