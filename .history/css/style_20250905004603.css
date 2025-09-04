@@ -1591,108 +1591,109 @@ footer .copyright p{
 }
 
 
-/*=======Get-in-touch=======*/
-
-.get-in-touch{
-  margin-top: 70px;
+/*==================== GET IN TOUCH (Corrected Style) ====================*/
+.get-in-touch {
+  /* This removes extra padding to make the card look right */
+  padding-top: 2rem;
+  padding-bottom: 4rem;
 }
 
-.get-in-touch .container .content{
-  width:100%
+.get-in-touch .content{
+  width: 100%;
 }
 
-.get-in-touch .contact-card{
-  position: relative;
-  width: 90%;
-  background: var(--card-bg-color);
-  box-shadow: var(--box-shadow);
-  padding: 50px;
+.get-in-touch-card {
+  width: 100%;
+  height: 400px;
+  /* This sets the dark, textured background for the RIGHT side */
+  background-color: var(--body-bg-color);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
   border-radius: 10px;
-  column-gap: 50px;
+  box-shadow: var(--box-shadow);
 }
 
-.contact-card .title{
-  text-transform: uppercase;
-  line-height: 60px;
+.contact-card {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  /* This sets the solid background for the LEFT side */
+  background: var(--card-bg-color);
+  border-radius: 10px 0 0 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .contact-card .title h4{
   font-size: 1.2em;
-  font-weight: 300;
-  line-height: 20px;
+  font-weight: 500;
 }
 
 .contact-card .title h3{
-  font-size: 2.3em;
-  font-weight: 400;
+  font-size: 2em;
+  font-weight: 600;
 }
 
 .contact-card .title h2{
-  font-size: 4.2em;
-  font-weight: 700;
-  background: linear-gradient(to top, transparent 0%, var(--first-color) 30%);
+  font-size: 3em;
+  font-weight: 800;
+  background: linear-gradient(to top, transparent 0%, var(--first-color) 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: .9;
 }
 
-/*=======Our Clients=======*/
-.our-client.container{
-  flex-direction: column;
-}
 
-.our-client.container.content{
+/*==================== OUR CLIENTS (FROM OLD PORTFOLIO) ====================*/
+.clients .content{
   width: 100%;
 }
 
-.client-swiper .swiper-wrapper{
-  margin-bottom: 30px;
-}
-
 .client-swiper .swiper-slide{
-  gap: 50px;
-  margin: 20px 0;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
-.client-img{
-  width: 250px;
-  height: 250px;
+.client-swiper .swiper-slide .client-img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
   overflow: hidden;
-  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: 5px solid var(--second-color);
 }
 
-.client-img img{
+.client-swiper .swiper-slide .client-img img{
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.client-details{
-  max-width: 500px;
+.client-swiper .swiper-slide h3{
+  font-size: 1.5em;
+  margin-bottom: 5px;
 }
 
-.client-details p{
-  font-size: 1.2em;
-  color: var(--third-color);
-  padding-bottom: 15px;
-  margin-bottom: 10px;
-  border-bottom:2px solid var(--line-color);
-}
-
-.client-details h3{
-  color: var(--first-color);
+.client-swiper .swiper-slide p{
   font-size: 1.1em;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 15px;
 }
 
-.swiper-button-next:after, .swiper-button-prev:after{
-  content: '';
+.client-swiper .swiper-slide span{
+  color: var(--third-color);
+  font-size: var(--font-normal);
 }
 
 .swiper-button-next, .swiper-button-prev{
-  color: var(--second-color);
-  font-size: 3em;
+  color: var(--second-color) !important;
 }
 
-.swiper-pagination-bullet, .swiper-pagination-bullet-active{
-  background: var(--second-color);
+.swiper-pagination-bullet-active{
+  background: var(--second-color) !important;
 }

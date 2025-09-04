@@ -1591,108 +1591,75 @@ footer .copyright p{
 }
 
 
-/*=======Get-in-touch=======*/
-
-.get-in-touch{
-  margin-top: 70px;
+/*==================== GET IN TOUCH ====================*/
+.get-in-touch {
+    background: var(--card-bg-color);
+    padding: 4rem 2rem;
 }
 
-.get-in-touch .container .content{
-  width:100%
+.get-in-touch-card {
+    background: var(--transparent-color-02);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
 }
 
-.get-in-touch .contact-card{
-  position: relative;
-  width: 90%;
-  background: var(--card-bg-color);
-  box-shadow: var(--box-shadow);
-  padding: 50px;
-  border-radius: 10px;
-  column-gap: 50px;
+.get-in-touch-card h2 {
+    color: var(--first-color);
+    transform: translateY(0); /* Override default title transform */
+    margin-bottom: 20px;
 }
 
-.contact-card .title{
-  text-transform: uppercase;
-  line-height: 60px;
+.get-in-touch-card p {
+    color: var(--third-color);
+    font-size: var(--font-normal);
+    max-width: 600px;
+    margin: 0 auto 30px;
 }
 
-.contact-card .title h4{
-  font-size: 1.2em;
-  font-weight: 300;
-  line-height: 20px;
+
+/*==================== CLIENT REVIEWS ====================*/
+.clients .container {
+    padding-bottom: 2rem;
 }
 
-.contact-card .title h3{
-  font-size: 2.3em;
-  font-weight: 400;
+.testimonial-card {
+    background: var(--card-bg-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.contact-card .title h2{
-  font-size: 4.2em;
-  font-weight: 700;
-  background: linear-gradient(to top, transparent 0%, var(--first-color) 30%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: .9;
+.testimonial-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--second-color);
 }
 
-/*=======Our Clients=======*/
-.our-client.container{
-  flex-direction: column;
+.client-info h3 {
+    font-size: 1.2em;
+    font-weight: 600;
 }
 
-.our-client.container.content{
-  width: 100%;
+.client-info span {
+    color: var(--third-color);
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    display: block;
 }
 
-.client-swiper .swiper-wrapper{
-  margin-bottom: 30px;
+.testimonial-card p {
+    font-style: italic;
+    color: var(--first-color);
 }
 
-.client-swiper .swiper-slide{
-  gap: 50px;
-  margin: 20px 0;
-}
-
-.client-img{
-  width: 250px;
-  height: 250px;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.client-img img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.client-details{
-  max-width: 500px;
-}
-
-.client-details p{
-  font-size: 1.2em;
-  color: var(--third-color);
-  padding-bottom: 15px;
-  margin-bottom: 10px;
-  border-bottom:2px solid var(--line-color);
-}
-
-.client-details h3{
-  color: var(--first-color);
-  font-size: 1.1em;
-}
-
-.swiper-button-next:after, .swiper-button-prev:after{
-  content: '';
-}
-
-.swiper-button-next, .swiper-button-prev{
-  color: var(--second-color);
-  font-size: 3em;
-}
-
-.swiper-pagination-bullet, .swiper-pagination-bullet-active{
-  background: var(--second-color);
+.swiper-button-next, .swiper-button-prev {
+    color: var(--second-color);
 }

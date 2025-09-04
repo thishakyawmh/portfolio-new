@@ -1636,63 +1636,49 @@ footer .copyright p{
   opacity: .9;
 }
 
-/*=======Our Clients=======*/
-.our-client.container{
-  flex-direction: column;
-}
-
-.our-client.container.content{
+/*=======Clients Section=======*/
+.clients .client-swiper{
   width: 100%;
+  padding: 40px 0;
 }
 
-.client-swiper .swiper-wrapper{
-  margin-bottom: 30px;
+.clients .swiper-slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.client-swiper .swiper-slide{
-  gap: 50px;
-  margin: 20px 0;
+.clients .swiper-slide img{
+  width: 150px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: .3s ease;
 }
 
-.client-img{
-  width: 250px;
-  height: 250px;
-  overflow: hidden;
-  border-radius: 10px;
+.clients .swiper-slide img:hover{
+  filter: grayscale(0%);
 }
 
-.client-img img{
+
+/*=======Our Clients Section=======*/
+.clients .client-swiper {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  padding: 40px 0;
 }
 
-.client-details{
-  max-width: 500px;
+.clients .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.client-details p{
-  font-size: 1.2em;
-  color: var(--third-color);
-  padding-bottom: 15px;
-  margin-bottom: 10px;
-  border-bottom:2px solid var(--line-color);
+.clients .swiper-slide img {
+  width: 150px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: 0.3s;
 }
 
-.client-details h3{
-  color: var(--first-color);
-  font-size: 1.1em;
-}
-
-.swiper-button-next:after, .swiper-button-prev:after{
-  content: '';
-}
-
-.swiper-button-next, .swiper-button-prev{
-  color: var(--second-color);
-  font-size: 3em;
-}
-
-.swiper-pagination-bullet, .swiper-pagination-bullet-active{
-  background: var(--second-color);
+.clients .swiper-slide img:hover {
+  filter: grayscale(0%);
 }
