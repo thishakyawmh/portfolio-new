@@ -1637,11 +1637,11 @@ footer .copyright p{
 }
 
 /*=======Our Clients=======*/
-.our-client .container{
+.our-client.container{
   flex-direction: column;
 }
 
-.our-client .content{
+.our-client.container.content{
   width: 100%;
 }
 
@@ -1672,7 +1672,7 @@ footer .copyright p{
 }
 
 .client-details p{
-  font-size: 1.1em;
+  font-size: 1.2em;
   color: var(--third-color);
   padding-bottom: 15px;
   margin-bottom: 10px;
@@ -1680,7 +1680,7 @@ footer .copyright p{
 }
 
 .client-details h3{
-  color: var(--second-color);
+  color: var(--first-color);
   font-size: 1.1em;
 }
 

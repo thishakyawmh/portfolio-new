@@ -149,21 +149,14 @@ function getGreeting() {
     const now = new Date();
     const hour = now.getHours();
     let greeting = '';
-    let icon = ''; // Variable to hold the icon HTML
-
     if (hour < 12) {
-        greeting = 'Good Morning';
-        icon = '<i class="fas fa-sun greeting-icon"></i>'; // Sunrise icon
+        greeting = 'Good Morning!';
     } else if (hour < 18) {
-        greeting = 'Good Afternoon';
-        icon = '<i class="fas fa-sun greeting-icon"></i>'; // Sun icon
+        greeting = 'Good Afternoon!';
     } else {
-        greeting = 'Good Evening';
-        icon = '<i class="fas fa-moon greeting-icon"></i>'; // Moon icon
+        greeting = 'Good Evening!';
     }
-
-    // Set the innerHTML to include both the icon and the text
-    document.getElementById('greeting').innerHTML = icon + '  ' + greeting;
+    document.getElementById('greeting').textContent = greeting;
 }
 
 window.onload = getGreeting;

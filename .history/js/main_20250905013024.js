@@ -153,7 +153,7 @@ function getGreeting() {
 
     if (hour < 12) {
         greeting = 'Good Morning';
-        icon = '<i class="fas fa-sun greeting-icon"></i>'; // Sunrise icon
+        icon = '<i class="fas fa-cloud-sun greeting-icon"></i>'; // Sunrise icon
     } else if (hour < 18) {
         greeting = 'Good Afternoon';
         icon = '<i class="fas fa-sun greeting-icon"></i>'; // Sun icon
@@ -163,7 +163,7 @@ function getGreeting() {
     }
 
     // Set the innerHTML to include both the icon and the text
-    document.getElementById('greeting').innerHTML = icon + '  ' + greeting;
+    document.getElementById('greeting').innerHTML = icon + ' ' + greeting;
 }
 
 window.onload = getGreeting;

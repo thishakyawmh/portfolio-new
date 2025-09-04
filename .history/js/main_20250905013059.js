@@ -163,7 +163,7 @@ function getGreeting() {
     }
 
     // Set the innerHTML to include both the icon and the text
-    document.getElementById('greeting').innerHTML = icon + '  ' + greeting;
+    document.getElementById('greeting').innerHTML = icon + ' ' + greeting;
 }
 
 window.onload = getGreeting;
