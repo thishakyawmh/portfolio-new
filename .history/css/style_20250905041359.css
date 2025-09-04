@@ -1391,7 +1391,6 @@ header.sticky .nav-bar{
   right: 0;
   margin: 20px;
   cursor: pointer;
-  font-size: var(--font-large);
 }
 
 .portfolio-model-body h3 {

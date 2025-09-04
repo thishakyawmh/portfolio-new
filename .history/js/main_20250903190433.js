@@ -28,26 +28,34 @@ modalCloseBtns.forEach((modalCloseBtn) => {
 });
 
 //Portfolio Modals
-const portfolioModals = document.querySelectorAll(".portfolio-model");
-const imgCards = document.querySelectorAll(".img-card");
+const imgCardContainers = document.querySelectorAll("[data-portfolio-target]");
 const portfolioCloseBtns = document.querySelectorAll(".portfolio-close-btn");
 
-var portfolioModal = function(modalClick){
-    portfolioModals[modalClick].classList.add("active");
-}
-
-imgCards.forEach((imgCard, i) => {
-    imgCard.addEventListener("click", () => {
-        portfolioModal(i);
+imgCardContainers.forEach((card) => {
+    card.addEventListener("click", () => {
+        const modalId = card.getAttribute("data-portfolio-target");
+        const modal = document.querySelector(modalId);
+        if (modal) {
+            modal.classList.add("active");
+        }
     });
 });
 
-portfolioCloseBtns.forEach((portfolioCloseBtn) => {
-    portfolioCloseBtn.addEventListener("click", () => {
-        portfolioModals.forEach((portfolioModalView) => {
-            portfolioModalView.classList.remove("active");
-        });
+portfolioCloseBtns.forEach((closeBtn) => {
+    closeBtn.addEventListener("click", (event) => {
+        event.stopPropagation(); // Prevents the card click event from firing again
+        const modal = closeBtn.closest(".portfolio-model");
+        if (modal) {
+            modal.classList.remove("active");
+        }
     });
+});
+
+// Optional: Close modal when clicking outside of it
+window.addEventListener('click', (e) => {
+    if (e.target.classList.contains('portfolio-model')) {
+        e.target.classList.remove('active');
+    }
 });
 
 //Client Swiper
