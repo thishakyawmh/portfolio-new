@@ -43,12 +43,30 @@ imgCardContainers.forEach((imgCardContainer, i) => {
 });
 
 portfolioCloseBtns.forEach((portfolioCloseBtn) => {
+    // We add the 'event' parameter here
     portfolioCloseBtn.addEventListener("click", (event) => {
+        // This new line stops the click from affecting the card behind it
         event.stopPropagation(); 
+        
         portfolioModals.forEach((portfolioModalView) => {
             portfolioModalView.classList.remove("active");
         });
     });
+});
+
+//Client Swiper
+var swiper = new Swiper(".client-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
 });
 
 // Dark/Light Theme
@@ -131,19 +149,20 @@ function getGreeting() {
     const now = new Date();
     const hour = now.getHours();
     let greeting = '';
-    let icon = ''; 
+    let icon = ''; // Variable to hold the icon HTML
 
     if (hour < 12) {
         greeting = 'Good Morning';
-        icon = '<i class="fas fa-sun greeting-icon"></i>'; 
+        icon = '<i class="fas fa-sun greeting-icon"></i>'; // Sunrise icon
     } else if (hour < 18) {
         greeting = 'Good Afternoon';
-        icon = '<i class="fas fa-sun greeting-icon"></i>'; 
+        icon = '<i class="fas fa-sun greeting-icon"></i>'; // Sun icon
     } else {
         greeting = 'Good Evening';
-        icon = '<i class="fas fa-moon greeting-icon"></i>'; 
+        icon = '<i class="fas fa-moon greeting-icon"></i>'; // Moon icon
     }
 
+    // Set the innerHTML to include both the icon and the text
     document.getElementById('greeting').innerHTML = icon + '  ' + greeting;
 }
 
@@ -188,6 +207,23 @@ highlightsTabs.forEach(tab => {
     });
 });
 
+// Certificate Modals
+const viewBtns = document.querySelectorAll(".view-btn");
+const certificateViewModals = document.querySelectorAll(".certificate-view-modal");
+const certificateViewCloseBtns = document.querySelectorAll(".certificate-view-modal .modal-close-btn");
+
+viewBtns.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    certificateViewModals[index].classList.add("active");
+  });
+});
+
+certificateViewCloseBtns.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    certificateViewModals[index].classList.remove("active");
+  });
+});
+
 // Skills Toggle
 const skillsHeaders = document.querySelectorAll('.skills__header');
 
@@ -228,7 +264,9 @@ const portfolioItems = document.querySelectorAll(".img-card-container");
 
 filterBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
+        // Remove active class from all buttons
         filterBtns.forEach((button) => button.classList.remove("active"));
+        // Add active class to the clicked button
         btn.classList.add("active");
 
         const filterValue = btn.getAttribute("data-filter");
@@ -245,52 +283,72 @@ filterBtns.forEach((btn) => {
     });
 });
 
-// =================== UNIFIED MODAL LOGIC FOR JOURNEY & HIGHLIGHTS ===================
-// This new, single block of code handles all modals that use the 'data-modal-target' attribute.
-// It replaces the old, conflicting code blocks.
-const openModalButtons = document.querySelectorAll("[data-modal-target]");
+// Qualification modal logic
+const qualificationModalBtns = document.querySelectorAll(".open-qualification-modal-btn");
+const qualificationModals = document.querySelectorAll(".qualification-modal");
+const qualificationModalCloseBtns = document.querySelectorAll(".qualification-modal .modal-close-btn");
 
-openModalButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        const modalId = button.getAttribute("data-modal-target");
-        const modal = document.querySelector(modalId);
-        if (modal) {
-            modal.classList.add("active");
-        }
-    });
-});
-
-const closeModalButtons = document.querySelectorAll(".qualification-modal .modal-close-btn, .certificate-view-modal .modal-close-btn");
-
-closeModalButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        const modal = button.closest(".qualification-modal, .certificate-view-modal");
-        if (modal) {
-            modal.classList.remove("active");
-        }
-    });
-});
-
-// Close modals when clicking outside of them
-window.addEventListener("click", (e) => {
-    if (e.target.classList.contains("qualification-modal") || e.target.classList.contains("certificate-view-modal")) {
-        e.target.classList.remove("active");
+qualificationModalBtns.forEach((modalBtn) => {
+  modalBtn.addEventListener("click", () => {
+    const modalId = modalBtn.getAttribute("data-modal-target");
+    const modal = document.querySelector(modalId);
+    if (modal) {
+      modal.classList.add("active");
     }
+  });
 });
-// =================== END OF UNIFIED MODAL LOGIC ===================
 
+qualificationModalCloseBtns.forEach((closeBtn) => {
+  closeBtn.addEventListener("click", () => {
+    const modal = closeBtn.closest(".qualification-modal");
+    if (modal) {
+      modal.classList.remove("active");
+    }
+  });
+});
+
+// Certificate and Volunteering modal logic
+const certificateModalBtns = document.querySelectorAll(".view-btn");
+const certificateModals = document.querySelectorAll(".certificate-view-modal");
+const certificateModalCloseBtns = document.querySelectorAll(".certificate-view-modal .modal-close-btn");
+
+certificateModalBtns.forEach((modalBtn) => {
+  modalBtn.addEventListener("click", () => {
+    const modalId = modalBtn.getAttribute("data-modal-target");
+    const modal = document.querySelector(modalId);
+    if (modal) {
+      modal.classList.add("active");
+    }
+  });
+});
+
+certificateModalCloseBtns.forEach((closeBtn) => {
+  closeBtn.addEventListener("click", () => {
+    const modal = closeBtn.closest(".certificate-view-modal");
+    if (modal) {
+      modal.classList.remove("active");
+    }
+  });
+});
+
+// Close modals when clicking outside
+window.addEventListener("click", (e) => {
+  if (e.target.classList.contains("qualification-modal") || e.target.classList.contains("certificate-view-modal")) {
+    e.target.classList.remove("active");
+  }
+});
 
 // Our clients - Swiper initialization
 var swiper = new Swiper(".client-swiper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
