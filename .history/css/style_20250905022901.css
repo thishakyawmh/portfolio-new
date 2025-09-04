@@ -567,13 +567,13 @@ header.sticky .nav-bar{
     background: none;
     border: none;
     color: var(--second-color);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     cursor: pointer;
     transition: transform 0.3s;
 }
 
 .skills__list .skill-open-btn:hover {
-    transform: translateX(2px);
+    transform: translateX(3px);
 }
 
 /* --- New Skill Modal Styles --- */
@@ -855,7 +855,6 @@ header.sticky .nav-bar{
   color: var(--second-color);
   cursor: pointer;
   transition: color 0.3s, transform 0.3s;
-  font-size: 1.2rem;
 }
 
 .qualification__calendar .fa-arrow-right:hover{
@@ -1708,29 +1707,4 @@ footer .copyright p{
 
 .client-swiper .swiper-wrapper{
   margin-bottom: 30px;
-}
-
-/* Blinking Dot for "Present" Status */
-
-.blinking-dot {
-  display: inline-block;
-  width: 9px;
-  height: 9px;
-  background-color: #28a745; /* Green color */
-  border-radius: 50%;
-  margin-left: 10px;
-  vertical-align: middle;
-  animation: blink-animation 1.2s infinite;
-}
-
-@keyframes blink-animation {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
-  }
 }

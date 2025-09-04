@@ -1720,7 +1720,7 @@ footer .copyright p{
   border-radius: 50%;
   margin-left: 10px;
   vertical-align: middle;
-  animation: blink-animation 1.2s infinite;
+  animation: blink-animation 1.9s infinite;
 }
 
 @keyframes blink-animation {
@@ -1731,6 +1731,4 @@ footer .copyright p{
     opacity: 0.2;
   }
   100% {
-    opacity: 1;
-  }
-}
+    opacity

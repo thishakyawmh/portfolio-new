@@ -1710,27 +1710,13 @@ footer .copyright p{
   margin-bottom: 30px;
 }
 
-/* Blinking Dot for "Present" Status */
-
 .blinking-dot {
-  display: inline-block;
-  width: 9px;
-  height: 9px;
-  background-color: #28a745; /* Green color */
-  border-radius: 50%;
-  margin-left: 10px;
-  vertical-align: middle;
-  animation: blink-animation 1.2s infinite;
-}
+      color: green;               /* Dot color */
+      font-size: 50px;            /* Dot size */
+      animation: blink 1s infinite; /* Blink animation */
+    }
 
-@keyframes blink-animation {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }  /* Visible */
+      25%, 75% { opacity: 0; }       /* Invisible */
+    }
