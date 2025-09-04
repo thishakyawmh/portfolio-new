@@ -387,3 +387,27 @@ popupCloseBtn.addEventListener('click', closePopup);
 
 
 
+//======================== SCROLL REVEAL ANIMATIONS (SIMPLE VERSION) ========================
+const sr = ScrollReveal({
+    origin: 'bottom', // Animate from the bottom
+    distance: '20px',  // A smaller distance for a subtle effect
+    duration: 1000,    // Shorter duration
+    delay: 200,        // A slight delay to start
+    opacity: 0,        // Start from transparent
+    scale: 1,          // No scaling
+    easing: 'ease-in-out',
+    reset: false       // Animations only happen once
+});
+
+// Animate the main titles
+sr.reveal('.section-title-02');
+
+// Animate the main content block of each section
+sr.reveal('.home-container, .about .content, .skills__container, .service-list, .portfolio-list, .client-swiper, .contact .content');
+
+// Animate the skill progress bars when they come into view
+const skillBars = document.querySelectorAll('.skill-percentage');
+skillBars.forEach(bar => {
+    sr.reveal(bar, {
+        onReveal: (el) => {
+            const width = el.getAttribute

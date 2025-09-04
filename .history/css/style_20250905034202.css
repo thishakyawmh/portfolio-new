@@ -58,6 +58,15 @@
   --scroll-bar-color: #3c3f47;
   --scroll-thumb-color: #5a5f69;
   --scroll-thumb-hover-color: #747b87;
+  background: linear-gradient(-45deg, #0d1218, #1a2734, #12151a, #2c3e50);
+  background-size: 400% 400%;
+  animation: backgroundAnimation 20s ease infinite;
+}
+  
+  @keyframes backgroundAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 * {
@@ -72,9 +81,10 @@ html {
 }
 
 body {
-  color: var(--first-color);
-  background: var(--body-bg-color);
-  transition: .5s ease;
+  background: linear-gradient(-45deg, #e7e8eb, #f0f1f4, #d8dbe2, #f5f6f8);
+  background-size: 400% 400%;
+  animation: backgroundAnimation 20s ease infinite;
+  transition: background 0.5s ease;
 }
 
 a {
@@ -96,7 +106,7 @@ li {
   max-width: 1150px;
   margin-left: auto;
   margin-right: auto;
-  padding: 3rem 2rem 1rem;
+  padding: 2rem 2rem 1rem;
 }
 
 .section-title-01 {
@@ -1806,19 +1816,4 @@ footer .copyright p{
 .popup-modal-body p {
   margin-bottom: 25px;
   color: var(--third-color);
-}
-
-/*==================== ENHANCED HOVER EFFECTS ====================*/
-.btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.img-card-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
-}
-
-.img-card-container:hover .img-card img {
-  transform: scale(1.05);
 }

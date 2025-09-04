@@ -387,3 +387,35 @@ popupCloseBtn.addEventListener('click', closePopup);
 
 
 
+//======================== SCROLL REVEAL ANIMATIONS (SIMPLIFIED) ========================
+const sr = ScrollReveal({
+    origin: 'bottom',
+    distance: '30px',
+    duration: 1200,
+    delay: 200,
+    opacity: 0,
+    scale: 0.9,
+    easing: 'cubic-bezier(0.5, 0, 0, 1)',
+});
+
+// Animate general elements
+sr.reveal('.section-title-01, .section-title-02');
+
+// Animate specific sections
+sr.reveal('.home-container, .about-info, .about-img, .contact-left, .contact-right');
+
+// Animate list items with a cascading effect
+sr.reveal('.professional-list li, .skills__container .skills__content, .service-list .service-container, .portfolio-list .img-card-container, .testimonials .swiper-slide', {
+    interval: 150
+});
+
+// Animate the skill progress bars when they come into view
+const skillBars = document.querySelectorAll('.skill-percentage');
+skillBars.forEach(bar => {
+    sr.reveal(bar, {
+        onReveal: (el) => {
+            const width = el.getAttribute('data-width');
+            el.style.width = width;
+        }
+    });
+});

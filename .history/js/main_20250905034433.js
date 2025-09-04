@@ -386,4 +386,3 @@ popupOkBtn.addEventListener('click', closePopup);
 popupCloseBtn.addEventListener('click', closePopup);
 
 
-

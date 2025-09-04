@@ -386,4 +386,35 @@ popupOkBtn.addEventListener('click', closePopup);
 popupCloseBtn.addEventListener('click', closePopup);
 
 
+//======================== SCROLL REVEAL ANIMATIONS (NEW) ========================
+// Copyright 2025, Developed By Thishakya
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+});
 
+// Animate general elements like section titles
+sr.reveal('.section-title-01, .section-title-02', { delay: 500, origin: 'left' });
+
+// Animate home section elements
+sr.reveal('.home-container .info', { origin: 'right' });
+sr.reveal('.home-container .home-img', { origin: 'left' });
+sr.reveal('.home .scroll-down', { delay: 2000, origin: 'bottom' });
+
+// Animate other sections
+sr.reveal('.about-img, .contact-left', { origin: 'left' });
+sr.reveal('.about-info, .contact-right', { origin: 'right' });
+sr.reveal('.skills__container .skills__content, .service-list .service-container, .portfolio-list .img-card-container, .testimonials .swiper-slide', { interval: 200 });
+
+// Animate the skill progress bars when they come into view
+const skillBars = document.querySelectorAll('.skill-percentage');
+skillBars.forEach(bar => {
+    sr.reveal(bar, {
+        onReveal: (el) => {
+            const width = el.getAttribute('data-width');
+            el.style.width = width;
+        }
+    });
+});
