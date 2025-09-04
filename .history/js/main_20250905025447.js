@@ -339,7 +339,7 @@ const popupOkBtn = document.getElementById('popup-ok-btn');
 const popupCloseBtn = document.querySelector('.popup-close-btn');
 
 // --- IMPORTANT: PASTE YOUR GOOGLE APPS SCRIPT URL HERE ---
-const scriptURL = 'PASTE_YOUR_WEB_APP_URL_HERE'; 
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyr7Cm26u5_PlmboyDF96SAgTBJRAh_vwPPdYGJfa2v5zWd5EMDfFC2pbXVoFGtO66Vog/exec'; 
 
 contactForm.addEventListener('submit', e => {
   e.preventDefault();

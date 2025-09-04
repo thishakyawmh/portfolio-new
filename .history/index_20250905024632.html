@@ -107,7 +107,7 @@
         <h2 class="section-title-02">Skills</h2>
     </div>
     <div class="skills__container container grid">
-        <div class="skills__content skills__open">
+        <div class="skills__content skills__close">
             <div class="skills__header">
                 <i class="fa-solid fa-laptop-code skills__icon"></i>
                 <div>
@@ -728,8 +728,6 @@
                 <button class="filter-btn" data-filter="mobile">Mobile</button>
                 <button class="filter-btn" data-filter="iot">IOT</button>
                 <button class="filter-btn" data-filter="devops">DevOps</button>
-                <button class="filter-btn" data-filter="devops">Other</button>
-
             </div>
           <div class="portfolio-list">
             <div class="img-card-container" data-id="web">
@@ -948,7 +946,7 @@
       </section>
 
 
-     <section class="contact section" id="contact">
+    <section class="contact section" id="contact">
       <div class="container flex-center">
         <h1 class="section-title-01">Contact Me</h1>
         <h2 class="section-title-02">Contact Me</h2>
@@ -971,16 +969,16 @@
             </ul>
           </div>
           <div class="contact-right">
-            <form class="contact-form" id="contact-form">
+            <form action="" class="contact-form">
               <div class="first-row">
-                <input type="text" name="name" placeholder="Name" required>
+                <input type="text" placeholder="Name">
               </div>
               <div class="second-row">
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="text" name="subject" placeholder="Subject" required>
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Subject">
               </div>
               <div class="third-row">
-                <textarea name="message" rows="7" placeholder="Message" required></textarea>
+                <textarea name="message" id="" rows="7" placeholder="Message"></textarea>
               </div>
               <button class="btn" type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
             </form>
@@ -988,17 +986,6 @@
         </div>
       </div>
     </section>
-
-     <div class="popup-modal" id="submission-popup">
-        <div class="popup-modal-body">
-            <i class="fas fa-times popup-close-btn"></i>
-            <div id="popup-icon" class="popup-icon">
-                </div>
-            <h3 id="popup-title"></h3>
-            <p id="popup-message"></p>
-            <button class="btn" id="popup-ok-btn">OK</button>
-        </div>
-    </div>
 
     <footer>
       <div class="copyright">
