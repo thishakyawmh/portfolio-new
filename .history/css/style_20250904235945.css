@@ -951,7 +951,6 @@ header.sticky .nav-bar{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1148,8 +1147,8 @@ header.sticky .nav-bar{
 
 .portfolio-list {
   display: grid;
-  /* Three columns for desktops */
-  grid-template-columns: repeat(3, 1fr);
+  /* Four columns for desktops */
+  grid-template-columns: repeat(4, 1fr);
   max-width: 100%;
   gap: 35px;
   margin: 0 auto;
