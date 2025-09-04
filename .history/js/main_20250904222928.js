@@ -162,39 +162,20 @@ function getGreeting() {
 window.onload = getGreeting;
 
 // Qualification Tabs
-const journeyTabs = document.querySelectorAll('#journey [data-target]');
-const journeyTabContents = document.querySelectorAll('#journey [data-content]');
+const tabs = document.querySelectorAll('[data-target]');
+const tabContents = document.querySelectorAll('[data-content]');
 
-journeyTabs.forEach(tab => {
+tabs.forEach(tab => {
     tab.addEventListener('click', () => {
         const target = document.querySelector(tab.dataset.target);
 
-        journeyTabContents.forEach(tabContent => {
+        tabContents.forEach(tabContent => {
             tabContent.classList.remove('qualification__active');
         });
         target.classList.add('qualification__active');
 
-        journeyTabs.forEach(t => {
-            t.classList.remove('qualification__active');
-        });
-        tab.classList.add('qualification__active');
-    });
-});
-
-const highlightsTabs = document.querySelectorAll('#highlights [data-target]');
-const highlightsTabContents = document.querySelectorAll('#highlights [data-content]');
-
-highlightsTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        const target = document.querySelector(tab.dataset.target);
-
-        highlightsTabContents.forEach(tabContent => {
-            tabContent.classList.remove('qualification__active');
-        });
-        target.classList.add('qualification__active');
-
-        highlightsTabs.forEach(t => {
-            t.classList.remove('qualification__active');
+        tabs.forEach(tab => {
+            tab.classList.remove('qualification__active');
         });
         tab.classList.add('qualification__active');
     });

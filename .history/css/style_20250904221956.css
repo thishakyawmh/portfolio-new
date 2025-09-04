@@ -854,7 +854,6 @@ header.sticky .nav-bar{
   margin-left: 10px;
   color: var(--second-color);
   cursor: pointer;
-  transition: color 0.3s, transform 0.3s;
 }
 
 .qualification__calendar .fa-arrow-right:hover{

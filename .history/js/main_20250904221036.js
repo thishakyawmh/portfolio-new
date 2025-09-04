@@ -162,39 +162,20 @@ function getGreeting() {
 window.onload = getGreeting;
 
 // Qualification Tabs
-const journeyTabs = document.querySelectorAll('#journey [data-target]');
-const journeyTabContents = document.querySelectorAll('#journey [data-content]');
+const tabs = document.querySelectorAll('[data-target]');
+const tabContents = document.querySelectorAll('[data-content]');
 
-journeyTabs.forEach(tab => {
+tabs.forEach(tab => {
     tab.addEventListener('click', () => {
         const target = document.querySelector(tab.dataset.target);
 
-        journeyTabContents.forEach(tabContent => {
+        tabContents.forEach(tabContent => {
             tabContent.classList.remove('qualification__active');
         });
         target.classList.add('qualification__active');
 
-        journeyTabs.forEach(t => {
-            t.classList.remove('qualification__active');
-        });
-        tab.classList.add('qualification__active');
-    });
-});
-
-const highlightsTabs = document.querySelectorAll('#highlights [data-target]');
-const highlightsTabContents = document.querySelectorAll('#highlights [data-content]');
-
-highlightsTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        const target = document.querySelector(tab.dataset.target);
-
-        highlightsTabContents.forEach(tabContent => {
-            tabContent.classList.remove('qualification__active');
-        });
-        target.classList.add('qualification__active');
-
-        highlightsTabs.forEach(t => {
-            t.classList.remove('qualification__active');
+        tabs.forEach(tab => {
+            tab.classList.remove('qualification__active');
         });
         tab.classList.add('qualification__active');
     });
@@ -276,25 +257,15 @@ filterBtns.forEach((btn) => {
     });
 });
 
-// Qualification Modals
-const qualificationModalBtns = document.querySelectorAll(".open-qualification-modal-btn");
-const qualificationModals = document.querySelectorAll(".qualification-modal");
+// Education Modal
+const educationModal = document.querySelector(".education-modal");
+const openEducationModalBtn = document.querySelector("#open-education-modal");
+const educationModalCloseBtn = document.querySelector(".education-modal .modal-close-btn");
 
-qualificationModalBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        const modalId = btn.getAttribute("data-modal-target");
-        const modal = document.querySelector(modalId);
-        if (modal) {
-            modal.classList.add("active");
-        }
-    });
+openEducationModalBtn.addEventListener("click", () => {
+    educationModal.classList.add("active");
 });
 
-qualificationModals.forEach((modal) => {
-    const closeBtn = modal.querySelector(".modal-close-btn");
-    if (closeBtn) {
-        closeBtn.addEventListener("click", () => {
-            modal.classList.remove("active");
-        });
-    }
+educationModalCloseBtn.addEventListener("click", () => {
+    educationModal.classList.remove("active");
 });

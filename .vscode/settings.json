@@ -1,0 +1,7 @@
+{
+  "search.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true
+  }
+}
